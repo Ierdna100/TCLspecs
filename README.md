@@ -1,4 +1,4 @@
-# TC Lang (TCL) specifications - Version 0.5
+# TC Lang (TCL) specifications - Version 0.6
 
 ## Table of contents
 
@@ -82,12 +82,12 @@ arr[2]; // is equal to 15
 
 Let `x = 5` at mem address `0d240`
 ```c
-int ptr = *x; // ptr = 240
+int ptr = &x; // ptr = 240
 ```
 
 ### Value dereferencing:
 ```c
-int val = &ptr; // val = 5
+int val = *ptr; // val = 5
 ```
 
 ### Allocating and freeing memory:
@@ -324,7 +324,7 @@ bool b1 = (bool) num; // If non-zero is true like in C++
 | Logical OR | `\|\|` |
 | Logical AND | `&&` |
 | Logical NOT | `!` |
-| Equality | `=` |
+| Equality | `==` |
 | Inequality | `!=` |
 | Less than | `<` |
 | Less than or equal | `<=` |
@@ -427,7 +427,7 @@ A line beginning with a colon (`:`) defines a label
 
 ```c
 if (yourMom) {
-    :yourMom
+    yourMom:
     
     // shit code
 
