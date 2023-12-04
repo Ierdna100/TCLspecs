@@ -163,7 +163,8 @@ struct Type {
 `enum`:  
 With specific values for each key:
 ```c
-enum HTTPMethods {
+enum HTTPMethods
+{
     GET = 0,
     POST = 1,
     TRACE = 2
@@ -172,7 +173,8 @@ enum HTTPMethods {
 
 With ordered values for each key, starting at 0:
 ```c
-enum HTTPMethods {
+enum HTTPMethods
+{
     GET,
     POST,
     TRACE
